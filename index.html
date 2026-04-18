@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Campus Heart Web MVP</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="app-header">
+      <h1>Campus Heart Web MVP</h1>
+      <p class="subtitle">아이폰에서도 굴러가는 육성 미연시 프로토타입</p>
+    </header>
+
+    <main class="layout">
+      <section class="panel stats-panel">
+        <h2>상태</h2>
+        <div id="status" class="status-grid"></div>
+        <div class="meta-row">
+          <button id="saveBtn" class="secondary">저장</button>
+          <button id="loadBtn" class="secondary">불러오기</button>
+          <button id="resetBtn" class="danger">처음부터</button>
+        </div>
+      </section>
+
+      <section class="panel story-panel">
+        <h2>이야기</h2>
+        <div id="story" class="story-box"></div>
+        <div id="choices" class="choices"></div>
+      </section>
+
+      <section class="panel actions-panel">
+        <h2>오늘의 행동</h2>
+        <div id="actions" class="action-grid"></div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <p>목표: 7일 동안 성장하고, 관계를 만들고, 엔딩을 본다.</p>
+    </footer>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
