@@ -1,0 +1,77 @@
+[gd_scene load_steps=2 format=3 uid="uid://mainscene"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_main"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_main")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="MarginContainer/VBox"]
+layout_mode = 2
+text = "Campus Heart MVP"
+horizontal_alignment = 1
+
+[node name="Status" type="RichTextLabel" parent="MarginContainer/VBox"]
+custom_minimum_size = Vector2(0, 170)
+layout_mode = 2
+bbcode_enabled = true
+fit_content = true
+
+[node name="EventText" type="RichTextLabel" parent="MarginContainer/VBox"]
+custom_minimum_size = Vector2(0, 180)
+layout_mode = 2
+bbcode_enabled = true
+fit_content = true
+
+[node name="Choices" type="VBoxContainer" parent="MarginContainer/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="ActionsLabel" type="Label" parent="MarginContainer/VBox"]
+layout_mode = 2
+text = "Today's action"
+
+[node name="ActionButtons" type="HBoxContainer" parent="MarginContainer/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="StudyButton" type="Button" parent="MarginContainer/VBox/ActionButtons"]
+layout_mode = 2
+text = "Study"
+
+[node name="WorkOutButton" type="Button" parent="MarginContainer/VBox/ActionButtons"]
+layout_mode = 2
+text = "Workout"
+
+[node name="TalkButton" type="Button" parent="MarginContainer/VBox/ActionButtons"]
+layout_mode = 2
+text = "Talk"
+
+[node name="RestButton" type="Button" parent="MarginContainer/VBox/ActionButtons"]
+layout_mode = 2
+text = "Rest"
+
+[node name="Footer" type="Label" parent="MarginContainer/VBox"]
+layout_mode = 2
+text = "7 days later, your ending is decided."
